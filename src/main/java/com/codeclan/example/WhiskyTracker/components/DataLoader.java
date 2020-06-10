@@ -93,7 +93,7 @@ public class DataLoader implements ApplicationRunner {
         Whisky whisky13 = new Whisky("Lagavulin 16 Year Old", 16, 2014, distillery9);
         whiskyRepository.save(whisky13);
 
-        Whisky whisky14 = new Whisky("Lg10 - Elements of Islay" , 1, 2007, distillery9);
+        Whisky whisky14 = new Whisky("Lg10 - Elements of Islay", 1, 2007, distillery9);
         whiskyRepository.save(whisky14);
 
         Distillery distillery10 = new Distillery("Laphroaig", "Islay");
@@ -102,7 +102,7 @@ public class DataLoader implements ApplicationRunner {
         Whisky whisky15 = new Whisky("Lagavulin 16 Year Old", 16, 2014, distillery8);
         whiskyRepository.save(whisky15);
 
-        Whisky whisky16 = new Whisky("Lg10 - Elements of Islay" , 1, 2007, distillery7);
+        Whisky whisky16 = new Whisky("Lg10 - Elements of Islay", 1, 2007, distillery7);
         whiskyRepository.save(whisky16);
 
         Distillery distillery11 = new Distillery("Talisker", "Island");
@@ -111,24 +111,24 @@ public class DataLoader implements ApplicationRunner {
         Whisky whisky17 = new Whisky("57° North", 1, 2014, distillery11);
         whiskyRepository.save(whisky17);
 
-        Whisky whisky18 = new Whisky("Skye" , 1, 2015, distillery11);
+        Whisky whisky18 = new Whisky("Skye", 1, 2015, distillery11);
         whiskyRepository.save(whisky18);
 
-        Distillery distillery12 = new Distillery("Isle of Arran","Island" );
+        Distillery distillery12 = new Distillery("Isle of Arran", "Island");
         distilleryRepository.save(distillery12);
 
         Whisky whisky19 = new Whisky("Caskstrength and Carry On", 13, 2011, distillery12);
         whiskyRepository.save(whisky19);
 
-        Whisky whisky20 = new Whisky("Seven Wood" , 1, 2018, distillery12);
+        Whisky whisky20 = new Whisky("Seven Wood", 1, 2018, distillery12);
         whiskyRepository.save(whisky20);
-        Distillery distillery13 = new Distillery("The Glenlivet","Speyside" );
+        Distillery distillery13 = new Distillery("The Glenlivet", "Speyside");
 
         distilleryRepository.save(distillery13);
         Whisky whisky21 = new Whisky("Founder's Reserve", 12, 2014, distillery13);
         whiskyRepository.save(whisky21);
 
-        Whisky whisky22 = new Whisky("Carmaferg" , 18, 2018, distillery13);
+        Whisky whisky22 = new Whisky("Carmaferg", 18, 2018, distillery13);
         whiskyRepository.save(whisky22);
     }
 }

@@ -18,43 +18,43 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest
 public class WhiskyTrackerApplicationTests {
 
-	@Autowired
-	DistilleryRepository distilleryRepository;
+    @Autowired
+    DistilleryRepository distilleryRepository;
 
-	@Autowired
-	WhiskyRepository whiskyRepository;
+    @Autowired
+    WhiskyRepository whiskyRepository;
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
-	@Test
-	public void canFindWhiskyByYear() {
-		List<Whisky> foundWhiskies = whiskyRepository.findByYear(2018);
-		assertEquals(6, foundWhiskies.size());
-	}
+    @Test
+    public void canFindWhiskyByYear() {
+        List<Whisky> foundWhiskies = whiskyRepository.findByYear(2018);
+        assertEquals(6, foundWhiskies.size());
+    }
 
-	@Test
-	public void canFindDistilleryByRegion() {
-		List<Distillery> foundDistilleries = distilleryRepository.findByRegion("Highland");
-		assertEquals(3, foundDistilleries.size());
-	}
+    @Test
+    public void canFindDistilleryByRegion() {
+        List<Distillery> foundDistilleries = distilleryRepository.findByRegion("Highland");
+        assertEquals(3, foundDistilleries.size());
+    }
 
-	@Test
-	public void canFindWhiskyByDistilleryAndAge() {
-		List<Whisky> foundWhiskies = whiskyRepository.findByDistilleryNameAndAge("Talisker", 1);
-		assertEquals(2, foundWhiskies.size());
-	}
+    @Test
+    public void canFindWhiskyByDistilleryAndAge() {
+        List<Whisky> foundWhiskies = whiskyRepository.findByDistilleryNameAndAge("Talisker", 1);
+        assertEquals(2, foundWhiskies.size());
+    }
 
-	@Test
-	public void canFindWhiskyByDistilleryRegion() {
-		List<Whisky> foundWhiskies = whiskyRepository.findByDistilleryRegion("Highland");
-		assertEquals(7, foundWhiskies.size());
-	}
+    @Test
+    public void canFindWhiskyByDistilleryRegion() {
+        List<Whisky> foundWhiskies = whiskyRepository.findByDistilleryRegion("Highland");
+        assertEquals(7, foundWhiskies.size());
+    }
 
-	@Test
-	public void canFindDistilleryWithWhiskyOfASetAge() {
-		List<Distillery> foundDistilleries = distilleryRepository.findByWhiskiesAgeIs(12);
-		assertEquals(6, foundDistilleries.size());
-	}
+    @Test
+    public void canFindDistilleryWithWhiskyOfASetAge() {
+        List<Distillery> foundDistilleries = distilleryRepository.findByWhiskiesAgeIs(12);
+        assertEquals(6, foundDistilleries.size());
+    }
 }

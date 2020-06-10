@@ -17,18 +17,17 @@ public class DistilleryController {
     @Autowired
     DistilleryRepository distilleryRepository;
 
-   @GetMapping(value = "/distilleries")
+    @GetMapping(value = "/distilleries")
     public ResponseEntity<List<Distillery>> getDistilleries(
             @RequestParam(name = "region", required = false) String region,
-            @RequestParam(name = "whiskyAge", required = false) Integer age)
-   {
-       if (region != null){
-           return new ResponseEntity<>(distilleryRepository.findByRegion(region), HttpStatus.OK);
-       }
-       if(age != null){
-           return new ResponseEntity<>(distilleryRepository.findByWhiskiesAgeIs(age), HttpStatus.OK);
-       }
-       return new ResponseEntity<>(distilleryRepository.findAll(), HttpStatus.OK);
+            @RequestParam(name = "whiskyAge", required = false) Integer age) {
+        if (region != null) {
+            return new ResponseEntity<>(distilleryRepository.findByRegion(region), HttpStatus.OK);
+        }
+        if (age != null) {
+            return new ResponseEntity<>(distilleryRepository.findByWhiskiesAgeIs(age), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(distilleryRepository.findAll(), HttpStatus.OK);
     }
 
 
